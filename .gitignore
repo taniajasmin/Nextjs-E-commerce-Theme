@@ -1,6 +1,8 @@
 # =============================================================
 # Pixio Theme — .gitignore
 # =============================================================
+# Note: This is a static HTML theme. No build step.
+# All vendor/, dist/, and src/ folders under vendor/ ARE committed.
 
 # ---------- OS junk ----------
 # macOS
@@ -33,6 +35,7 @@ $RECYCLE.BIN/
 *.sublime-workspace
 .project
 .classpath
+nbproject/
 
 # ---------- Logs ----------
 *.log
@@ -47,14 +50,15 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
-# ---------- Build artifacts ----------
-node_modules/
-dist/
-build/
+# ---------- Build artifacts (NOT vendor dist/ — that's part of the theme) ----------
+# If you ever add a build step at project root, uncomment:
+# /node_modules/
+# /build/
+# /dist/        # root-level only — vendor/*/dist/ is committed
 .cache/
 .parcel-cache/
 .tmp/
-tmp/
+/tmp/
 *.tsbuildinfo
 
 # ---------- Python (if you use http.server scripts) ----------
@@ -70,13 +74,18 @@ __pycache__/
 *.orig
 *.rej
 
-# ---------- Package manager locks (uncomment if not tracking) ----------
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
-
 # ---------- Local-only dev files ----------
-local/
-dev/
+/local/
+/dev/
 *.local.html
 *.local.css
+*.local.js
+
+# ---------- Misc ----------
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+.DS_Store?
+profile
+Thumbs.db
