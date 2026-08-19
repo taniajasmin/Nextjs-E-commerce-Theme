@@ -1,0 +1,82 @@
+# =============================================================
+# Pixio Theme — .gitignore
+# =============================================================
+
+# ---------- OS junk ----------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# ---------- Editors / IDEs ----------
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+
+# ---------- Logs ----------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Environment / secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Build artifacts ----------
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.tmp/
+tmp/
+*.tsbuildinfo
+
+# ---------- Python (if you use http.server scripts) ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# ---------- Backups ----------
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# ---------- Package manager locks (uncomment if not tracking) ----------
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ---------- Local-only dev files ----------
+local/
+dev/
+*.local.html
+*.local.css
